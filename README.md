@@ -25,8 +25,8 @@ Initial Research
 As I'm a believer of a repository pattern, and I'm not a adept CoreData developer, I'd continue using the repository pattern despite the fact that it negates the advantages of CoreData as an object graph.
 
 ### Personal Objectives: ###
-- [x]Experiment with Integration test with plain ol' XCUITest
-- [x]Replace Alamofire with URLSessionn if time permits
+- [x] Experiment with Integration test with plain ol' XCUITest
+- [x] Replace Alamofire with URLSessionn if time permits
 
 #### Phase 1: Basic app: upon launching, fetch all posts and populate screen ####
 
