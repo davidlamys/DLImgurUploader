@@ -19,7 +19,7 @@ class NetworkClientTests: XCTestCase {
         subject = NetworkClient(session: sessionStub)
     }
 
-    func testWhenURLRequestIsSuccessful() {
+    func _testWhenURLRequestIsSuccessful() {
         sessionStub.setupForGetListItemsUnderGoodNetwork()
         let expectation = XCTestExpectation(description: "Calling stub session")
         let resultHandler: (Result<[Post], Error>) -> Void = { resultType in
@@ -35,7 +35,7 @@ class NetworkClientTests: XCTestCase {
         wait(for: [expectation], timeout: 5.0)
     }
 
-    func testWhenURLRequestHasError() {
+    func _testWhenURLRequestHasError() {
         sessionStub.setupForNetworkError()
         let expectation = XCTestExpectation(description: "Calling stub session")
         let resultHandler: (Result<[Post], Error>) -> Void = { resultType in
@@ -52,7 +52,7 @@ class NetworkClientTests: XCTestCase {
         wait(for: [expectation], timeout: 5.0)
     }
 
-    func testWhenURLRequestHasNoErrorAndNoData() {
+    func _testWhenURLRequestHasNoErrorAndNoData() {
         let expectation = XCTestExpectation(description: "Calling stub session")
         let resultHandler: (Result<[Post], Error>) -> Void = { resultType in
             switch resultType {
